@@ -1,0 +1,143 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.page-container {
+  width: 100%;
+  text-align: center;
+}
+
+.form-container {
+  max-width: 500px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3a8ee6;
+}
+
+.form-button {
+  padding: 10px 20px;
+  color: white;
+  background-color: #3a8ee6;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form-button:hover {
+  background-color: #2b7ddb;
+}
+
+.buttons-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.auth-button, .form-button {
+  padding: 10px 20px;
+  color: white;
+  background-color: #3a8ee6;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+  min-width: 200px;
+  font-size: inherit;
+}
+
+.auth-button:hover, .form-button:hover {
+  background-color: #2b7ddb;
+}
+
+.secondary {
+  background-color: #3a8ee6 !important;
+}
+
+.secondary:hover {
+  background-color: #2b7ddb;
+}
+.profile-page {
+  max-width: 400px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+.logout-button {
+  padding: 10px 20px;
+  color: white;
+  background-color: #3a8ee6;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.logout-button:hover {
+  background-color: #2b7ddb;
+}
+
+.check-token-message {
+  font-style: italic;
+  color: #3a8ee6;
+}
+
+.loading-indicator {
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.logout-button {
+  padding: 10px 20px;
+  color: white;
+  background-color: #3a8ee6;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+  font-weight: bold;
+  min-width: 150px;
+}
+
+.logout-button:hover {
+  background-color: #2b7ddb;
+}

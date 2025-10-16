@@ -1,0 +1,30 @@
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  backend:
+    image: insparation06/auth_backend
+    depends_on:
+      - db
+    env_file:
+      - .env
+
+  frontend:
+    image: insparation06/auth_frontend
+    depends_on:
+      - backend
+  nginx:
+    image: insparation06/auth_nginx
+    ports:
+      - 8000:80
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
